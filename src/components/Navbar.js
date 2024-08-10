@@ -6,9 +6,11 @@ import logo from "../Assets/logo.jpg";
 import { Link } from "react-router-dom";
 import {
   AiOutlineHome,
-
+  AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
+
+import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -51,7 +53,7 @@ function NavBar() {
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                <AiOutlineHome style={{ marginBottom: "2px" }} /> 主页
               </Nav.Link>
             </Nav.Item>
 
@@ -61,32 +63,32 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> 关于
               </Nav.Link>
             </Nav.Item>
 
-            {/*<Nav.Item>*/}
-            {/*  <Nav.Link*/}
-            {/*    as={Link}*/}
-            {/*    to="/project"*/}
-            {/*    onClick={() => updateExpanded(false)}*/}
-            {/*  >*/}
-            {/*    <AiOutlineFundProjectionScreen*/}
-            {/*      style={{ marginBottom: "2px" }}*/}
-            {/*    />{" "}*/}
-            {/*    Projects*/}
-            {/*  </Nav.Link>*/}
-            {/*</Nav.Item>*/}
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/project"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineFundProjectionScreen
+                  style={{ marginBottom: "2px" }}
+                />{" "}
+                项目
+              </Nav.Link>
+            </Nav.Item>
 
-            {/*<Nav.Item>*/}
-            {/*  <Nav.Link*/}
-            {/*    as={Link}*/}
-            {/*    to="/resume"*/}
-            {/*    onClick={() => updateExpanded(false)}*/}
-            {/*  >*/}
-            {/*    <CgFileDocument style={{ marginBottom: "2px" }} /> Resume*/}
-            {/*  </Nav.Link>*/}
-            {/*</Nav.Item>*/}
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/resume"
+                onClick={() => updateExpanded(false)}
+              >
+                <CgFileDocument style={{ marginBottom: "2px" }} /> 简历
+              </Nav.Link>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
