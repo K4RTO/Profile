@@ -77,6 +77,7 @@ function Projects() {
                   title="Sphere 游戏"
                   description="该游戏是一个单人生存游戏，玩家通过击败敌人获取经验升级，共有四个方向的升级和多种特殊效果的方块，随着生存时间增加，游戏难度增大。"
                   ghLink="https://github.com/K4RTO/SphereX"
+                  playLink="https://play.unity.com/en/games/788d4993-cb5f-4eb9-8fce-2345d79d6dac/sphere-survival-game"
                   demoLink="#"
                   onClick={() => handleOpenModal("Game Demo", game_video)}
               />
@@ -89,7 +90,6 @@ function Projects() {
                   title="游戏引擎功能开发"
                   description="该项目是在Piccolo开源引擎的基础上，实现后处理渲染效果、物理系统、反射系统与工具链开发等功能。"
                   ghLink="https://github.com/K4RTO/Game_Engine"
-                  playLink="https://play.unity.com/en/games/788d4993-cb5f-4eb9-8fce-2345d79d6dac/sphere-survival-game"
                   demoLink="#"
                   onClick={() => handleOpenModal("Game Engine Demo", engine_video)}
               />
