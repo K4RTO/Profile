@@ -9,6 +9,10 @@ import Grass from "../../Assets/Projects/Grass.jpg";
 import fall_video from "../../Assets/Projects/Fall.mp4";
 import grass_video from "../../Assets/Projects/Grass.mov";
 import app_video from "../../Assets/Projects/App.mp4";
+import game_video from "../../Assets/Projects/Game.mp4";
+import engine_video from "../../Assets/Projects/Engine.mp4";
+import Game from "../../Assets/Projects/Game.jpg";
+import Engine from "../../Assets/Projects/Engine.png";
 
 function Projects() {
   const [modalData, setModalData] = useState({
@@ -50,7 +54,7 @@ function Projects() {
                   description="项目基于Python和Yolo模型，旨在利用计算机视觉和音频处理技术开发先进的跌倒检测系统。通过对摄像头和麦克风捕获的视频和音频数据进行实时分析，系统可以快速识别跌倒情况，从而为有需要的人员提供及时帮助。"
                   ghLink="https://github.com/K4RTO/Fall_Detection"
                   demoLink="#"
-                  onClick={() => handleOpenModal("人体跌落姿态检测 Demo", fall_video)}
+                  onClick={() => handleOpenModal("ShowCase Demo", fall_video)}
               />
             </Col>
 
@@ -66,6 +70,30 @@ function Projects() {
               />
             </Col>
 
+            <Col md={4} className="project-card">
+              <ProjectCard
+                  imgPath={Game}
+                  isBlog={false}
+                  title="Sphere 游戏"
+                  description="该游戏是一个单人生存游戏，玩家通过击败敌人获取经验升级，共有四个方向的升级和多种特殊效果的方块，随着生存时间增加，游戏难度增大。"
+                  ghLink="https://github.com/K4RTO/SphereX"
+                  demoLink="#"
+                  onClick={() => handleOpenModal("Game Demo", game_video)}
+              />
+            </Col>
+
+            <Col md={4} className="project-card">
+              <ProjectCard
+                  imgPath={Engine}
+                  isBlog={false}
+                  title="游戏引擎功能开发"
+                  description="该项目是在Piccolo开源引擎的基础上，实现后处理渲染效果、物理系统、反射系统与工具链开发等功能。"
+                  ghLink="https://github.com/K4RTO/Game_Engine"
+                  playLink="https://play.unity.com/en/games/788d4993-cb5f-4eb9-8fce-2345d79d6dac/sphere-survival-game"
+                  demoLink="#"
+                  onClick={() => handleOpenModal("Game Engine Demo", engine_video)}
+              />
+            </Col>
             <Col md={4} className="project-card">
               <ProjectCard
                   imgPath={App}
